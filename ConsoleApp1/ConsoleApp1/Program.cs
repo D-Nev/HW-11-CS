@@ -18,16 +18,18 @@ namespace ConsoleApp1
                     Console.Write("Введите текст: ");
                     string TextIntup = Console.ReadLine();
                     string MorseCode = converter.ToMorse(TextIntup).Encode();
-                    Console.WriteLine($"Текст в азбуке Морзе: {MorseCode}");
+                    Console.WriteLine($"Текст в азбуке Морза: {MorseCode}");
                     break;
 
                 case "2":
-                    Console.Write("Введите код Морзе (используйте '/' для разделения слов): ");
+                    Console.Write("Введите код Морза: ");
                     string inputMorse = Console.ReadLine();
                     string decodedText = converter.Decode(inputMorse);
                     Console.WriteLine($"Расшифрованный текст: {decodedText}");
                     break;
             }
         }
+
+        
     }
 }
